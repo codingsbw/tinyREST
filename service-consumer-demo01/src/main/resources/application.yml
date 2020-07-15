@@ -1,0 +1,16 @@
+server:
+  port: 8083
+eureka:
+  client:
+    service-url:
+#      Eureka单点注册
+      defaultZone: http://admin:admin@localhost:8000/eureka/
+#      Eureka集群注册
+#      defaultZone: http://admin:admin@eureka-service1:8001/eureka/,http://admin:admin@eureka-service2:8002/eureka/,http://admin:admin@eureka-service3:8003/eureka/
+
+spring:
+  application:
+    name: service-consumer-demo01
+feign:
+  hystrix:
+    enabled: true

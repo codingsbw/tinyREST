@@ -1,0 +1,9 @@
+server:
+  port: 8203
+spring:
+  application:
+    name: zuul-gateway-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@localhost:8000/eureka/

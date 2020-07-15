@@ -1,0 +1,19 @@
+server:
+  port: 8102
+spring:
+  application:
+    name: service-provider-demo01
+eureka:
+  client:
+    service-url:
+#      Eureka单点注册
+      defaultZone: http://admin:admin@localhost:8000/eureka/
+#      Eureka集群注册
+#      defaultZone: http://admin:admin@eureka-service1:8001/eureka/,http://admin:admin@eureka-service2:8002/eureka/,http://admin:admin@eureka-service3:8003/eureka/
+# 心跳检测检测与续约时间
+# 测试时将值设置设置小些，保证服务关闭后注册中心能及时踢出服务
+  instance:
+#    租期更新时间间隔（默认30秒）
+    lease-renewal-interval-in-seconds: 1
+#    租期到期时间（默认90秒）
+    lease-expiration-duration-in-seconds: 2

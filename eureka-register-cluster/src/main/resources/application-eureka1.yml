@@ -1,0 +1,23 @@
+server:
+  port: 8001
+eureka:
+  instance:
+    hostname: eureka-service1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://admin:admin@eureka-service2:8002/eureka/,http://admin:admin@eureka-service3:8003/eureka/
+  server:
+    enable-self-preservation: false
+
+spring:
+  application:
+    name: eureka-server
+  security:
+    user:
+      name: admin
+      password: admin
+
+
+
